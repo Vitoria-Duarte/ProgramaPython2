@@ -1,0 +1,69 @@
+ #Tabela de produtos
+print('+', 42 * '-',13* '-', '+')
+print('|','Bem Vindo a Lanchonete da Vitória Esteffany', '|') #exclui a parte do meu nome completo, como tem na saída de console
+print('+', 42 * '-', '+',11* '-', '+')
+print('|','Código', '|', 'Descrição            ', '|', 'Valor(R$)', '|')
+print('|', '100   ', '|', 'Cachorro-Quente      ', '|', '9,00     ', '|')
+print('|', '101   ', '|', 'Cachorro-Quente Duplo', '|', '11,00    ', '|')
+print('|', '102   ', '|', 'X-Egg                ', '|', '12,00    ','|')
+print('|', '103   ', '|', 'X-Salada             ', '|', '13,00    ', '|')
+print('|', '104   ', '|', 'X-Bacon              ', '|', '14,00    ', '|')
+print('|', '105   ', '|', 'X-Tudo               ', '|', '17,00    ', '|')
+print('|', '200   ', '|', 'Refrigerante Lata    ', '|', '5,00     ', '|')
+print('|', '201   ', '|', 'Chá Gelado           ', '|', '4,00     ', '|')
+print('+', 42 * '-', '+')
+
+#Variavel do valor da compra
+final = 0
+
+while True:
+     produto = input('Escolha seu pedido.\nResposta:') #Usuário informa produto
+
+     if(produto == '100'): #Verificando se é o pedido 100
+         valor = 9.00 
+         print('Você escolheu cachorro-quente no valor de 9,00')
+         final += valor #Colocando o valor na variavel final
+     elif(produto == '101'): #Verificando se é o pediddo 200
+         valor = 11.00
+         print('Você escolheu cachorro-quente Duplo no valor de 11,00')
+         final += valor
+     elif(produto == '102'): #Verificando se é o pediddo 102
+         valor = 12.00
+         print('Você escolheu X-Egg no valor de 12,00')
+         final += valor
+     elif(produto == '103'): #Verificando se é o pediddo 103
+         valor = 13.00
+         print('Você escolheu X-Salada no valor de 13,00')
+         final += valor
+     elif(produto == '104'): #Verificando se é o pediddo 104
+         valor = 14.00
+         print('Você escolheu X-Bacon no valor de 14,00')
+         final += valor
+     elif(produto == '105'): #Verificando se é o pediddo 105
+         valor = 17.00
+         print('Você escolheu X-Tudo no valor de 17,00')
+         final += valor
+     elif(produto == '200'): #Verificando se é o pediddo 200
+         valor = 5.00
+         print('Você escolheu refrigerante lata no valor de 5,00')
+         final += valor
+     elif(produto == '201'): #Verificando se é o pediddo 201
+         valor = 4.00
+         print('Você escolheu chá Gelado no valor de 4,00')
+         final += valor
+     else:
+        print('Opção Invalida!') #se  digitar valor diferente de 100 ou 201
+        continue
+     print('Deseja escolher mais algum item?') #Verificando se deseja mais algum produto
+     print('Sim - 1')
+     print('Não - 0')
+     escolha = int(input('Resposta:')) #Verificando se deseja mais algum pedido
+
+     if(escolha == 1):
+         continue
+     elif(escolha == 0):
+         print('Total a ser pago: R${:.2f}'.format(final)) #Valor final da compra
+         break
+     else:
+         print('Opção invalida!')
+         break
